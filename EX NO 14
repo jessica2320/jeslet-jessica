@@ -1,13 +1,9 @@
 #include <stdio.h>
-
 int main()
 {
     char file[20];
-
     printf("Enter File Name: ");
     scanf("%s", file);
-
     printf("File Stored: %s", file);
-
     return 0;
 }
