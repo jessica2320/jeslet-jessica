@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int block = 100;
+    int process = 80;
+
+    if(process <= block)
+        printf("Memory Allocated");
+    else
+        printf("Memory Not Allocated");
+
+    return 0;
+}
