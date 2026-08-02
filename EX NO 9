@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+
+int main()
+{
+    int id;
+    char *p;
+
+    id = shmget(1234, 100, 0666 | IPC_CREAT);
+    p = shmat(id, NULL, 0);
+
+    strcpy(p, "Hello");
+
+    printf("%s", p);
+
+    shmdt(p);
+
+    return 0;
+}
